@@ -17,6 +17,7 @@ dependencies:
   - wreq
   - scotty
   - text
+  - generic-lens
 
 executables:
   dhall-talk:
