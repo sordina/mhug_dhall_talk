@@ -43,6 +43,9 @@ hpDefaultConfig =
 main :: IO ()
 main =
   scotty 3000 $ do
+    get "/" $ do
+      redirect "/userconfig"
+
     get "/userconfig" $ do
       -- TODO: Automatically derive dhall type for UserConfig
       html "{ name : Text, ip : Text, pageLimit : Integer }"
