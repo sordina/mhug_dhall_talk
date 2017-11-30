@@ -1,8 +1,7 @@
 resolver: lts-9.14
 packages:
   - location: .
-  - location: ../../dhall-haskell
-    extra-dep: true
-extra-deps: []
+extra-deps:
+  - dhall-1.8.0
 flags: {}
 extra-package-dbs: []
