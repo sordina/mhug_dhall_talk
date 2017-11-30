@@ -1,0 +1,1 @@
+{ name : Text, ip : Text, pageLimit : Integer }
