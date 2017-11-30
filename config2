@@ -1,6 +1,0 @@
-\(x : Integer) -> {
-  a = 1,
-  b = x,
-  foo = 5
-} // ./config
-

@@ -1,5 +1,9 @@
 #!/bin/bash -e
 
+set -e
+set -o pipefail
+
+
 STUFF='
 {
     ip = "yoho",

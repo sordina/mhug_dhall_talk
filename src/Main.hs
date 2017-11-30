@@ -51,7 +51,7 @@ main =
       html "{ name : Text, ip : Text, pageLimit : Integer }"
 
     get "/hpconfig" $ do
-      -- TODO: Automatically derive dhall type for UserConfig
+      -- TODO: Automatically derive dhall type for HpConfig
       html "{ name : Text, ip : Text, pageLimit : Integer, updateURL : Text }"
 
     post "/" $ do
@@ -59,12 +59,10 @@ main =
       liftIO $ print bytes
       let b = decodeUtf8 bytes
 
-      -- no unindent
       (v :: UserConfig) <- liftIO $ input auto b
 
       let foo = smash v hpDefaultConfig
 
-          -- Do the enrichment
-          -- return it as dhall
+      -- TODO: Figure out how to serialise as Dhall
       html $ pack (drop 9 $ show foo)
 
